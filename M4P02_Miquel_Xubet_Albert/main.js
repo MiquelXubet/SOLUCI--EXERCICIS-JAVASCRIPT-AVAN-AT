@@ -30,6 +30,7 @@ window.addEventListener("load", () => {
       const valor = localStorage.getItem(clave);
       datos += `<p>${clave}: ${valor}</p>`;
     }
+
     //Mostrar los datos de SessionStorage
     datos += "<h3>SessionStorage:</h3>";
     for (let i = 0; i < sessionStorage.length; i++) {
@@ -37,6 +38,7 @@ window.addEventListener("load", () => {
       const valor = sessionStorage.getItem(clave);
       datos += `<p>${clave}: ${valor}</p>`;
     }
+
     document.getElementById("DatosAlmacenados").innerHTML = datos;
   };
 });
