@@ -32,6 +32,9 @@ window.addEventListener("load", () => {
         botonEliminar.addEventListener("click", () => {
           fetch(`https://jsonplaceholder.typicode.com/photos/${item.id}`, {
             method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+            },
           })
             .then((response) => {
               if (response.ok) {
