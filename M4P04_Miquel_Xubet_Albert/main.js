@@ -22,9 +22,13 @@ window.addEventListener("load", () => {
         tituloAlbum.textContent = item.title;
         fila.appendChild(tituloAlbum);
 
-        const imagen = document.createElement("td");
-        imagen.textContent = item.thumbnailUrl;
-        fila.appendChild(imagen);
+        const imagenCelda = document.createElement("td");
+        const imagen = document.createElement("img");
+        imagen.src = item.thumbnailUrl;
+        imagen.alt = item.title;
+        imagen.style.width = "100px";
+        imagenCelda.appendChild(imagen);
+        fila.appendChild(imagenCelda);
 
         const celdaEliminarRegistro = document.createElement("td");
         const botonEliminar = document.createElement("button");
